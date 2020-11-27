@@ -1,39 +1,20 @@
-//app.js
+//注册一个小程序示例
 App({
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
-      }
-    })
+  //小程序初始化完成后(app.json加载解析完毕)会执行的生命周期函数
+  onLaunch:function(){
+    //通常在该生命周期函数中获取用户信息
+    
   },
-  globalData: {
-    userInfo: null
+  //小程序界面显示出来后执行该生命周期函数
+  onShow:function(){
+
+  },
+  //小程序界面隐藏时执行，此时小程序会保留后台两个小时，如果没有再次开启，小程序从后台杀死,再次开启时又从onlaunch开始执行
+  onHide:function(){
+
+  },
+  //小程序中发生一些错误时执行
+  onError:function(){
+
   }
 })
