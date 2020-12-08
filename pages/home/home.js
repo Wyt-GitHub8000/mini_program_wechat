@@ -62,5 +62,20 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  handleShowToast(){
+    wx.showToast({
+      title: '添加成功',
+      duration: 3000,
+      icon: 'loading',
+      mask: true
+    })
+  },
+  handleShowModal(){
+    wx.showModal({
+      title: '我是标题',
+      content: '我是内容',
+      cancelText: '退出'
+    })
   }
 })

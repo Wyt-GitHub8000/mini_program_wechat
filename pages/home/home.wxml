@@ -1,2 +1,5 @@
 <!--pages/home/home.wxml-->
 <text>Hello world</text>
+<!-- 弹窗相关API -->
+<button bindtap="handleShowToast">展示弹窗1</button>
+<button bindtap="handleShowModal">展示弹窗2</button>
