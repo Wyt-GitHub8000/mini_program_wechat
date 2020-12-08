@@ -1,2 +1,24 @@
-<!--pages/home/home.wxml-->
-<text>Hello world</text>
+<!-- Mustache语法和Vue中的Mustache语法一样 -->
+<view>{{message}}</view>
+<button bindtap="handleSwitchColor">切换颜色</button>
+<view class="{{isShow ? 'active' : ''}}">哈哈哈</view>
+
+<!-- 小程序中的条件判断 -->
+<view wx:if="{{isShow}}">NBA新赛季</view>
+<view wx:elif="{{score>=90}}">优秀</view>
+<view wx:elif="{{score>=80}}">良好</view>
+<view wx:else="{{score>=60}}">及格</view>
+
+<!-- 所用组件都有的属性hidden。通过hidden隐藏与Vue中的v-show隐藏原理一样 -->
+<view hidden="{{false}}">组件隐藏属性</view>
+
+<!-- 列表渲染指令wx:for -->
+<view wx:for="{{superStart}}">
+  <view>
+    <text>{{item.name}}</text>
+    <text>{{item.age}}</text>
+    <text>{{item.position}}</text>
+  </view>
+</view>
+<!-- 为wx:for中的item,index起别名。wx:for-item='新名字' wx:for-index="新名字"；
+经常用在多层数组渲染的情况下用于区分 -->

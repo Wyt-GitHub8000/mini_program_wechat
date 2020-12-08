@@ -1,2 +1,1 @@
-<!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<tarbar titles="{{['衣服','裤子','帽子']}}" bind:itemClick="handleTabContlor"></tarbar>

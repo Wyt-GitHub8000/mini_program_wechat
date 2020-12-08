@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "tarbar": "/components/w-tabbar-control/w-tabbar-control"
+  }
 }
