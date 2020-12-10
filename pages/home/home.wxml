@@ -1,2 +1,12 @@
 <!--pages/home/home.wxml-->
 <text>Hello world</text>
+<view class="first">
+  <text>通过组件跳转</text>
+  <navigator url="/pages/about/about?name=wyt">跳到about页面</navigator>
+  <text>{{title}}</text>
+</view>
+<view class="secend">
+  <text>通过微信提供的API跳转</text>
+  <button bindtap="handleNav">跳转到about页面</button>
+</view>
+
